@@ -1,5 +1,6 @@
 # osc-noise-loops
 This openFrameworks application uses Perlin noise to generate seamless loops of smooth random values, and transmits them over OSC.
+![In action!](noise_loop.png)
 
 ## Description
 
