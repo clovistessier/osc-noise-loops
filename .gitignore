@@ -1,0 +1,54 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# .DS_Store
+**.DS_Store
+
+# obj and bin folder
+/obj
+/bin/data/settings.xml
+
+# Xcode / VS Code project files
+*.xcodeproj
+*.code-workspace
+*.xcconfig
+*.vscode
+
+# aarch64 project files
+*.qbs
+
+
+config.make
+*.plist
+of.entitlements
+/bin/data/config.txt
