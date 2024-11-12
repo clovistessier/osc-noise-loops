@@ -11,6 +11,7 @@
 #include "Clocker.h"
 
 #define SEND_PORT 8000
+#define RECEIVE_PORT 7002
 
 #define NUM_LOOPS 6
 
@@ -48,6 +49,7 @@ class ofApp : public ofBaseApp{
 
 		ofxPanel gui;
 		ofxOscSender sender;
+		ofxOscReceiver receiver;
 
 		
 };

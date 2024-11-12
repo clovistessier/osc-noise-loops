@@ -46,6 +46,7 @@ void ofApp::setup()
     gui.add(loop_params);
 
     sender.setup("localhost", SEND_PORT);
+    receiver.setup(RECEIVE_PORT);
 
     bDrawGui = true;
 }
@@ -55,6 +56,17 @@ void ofApp::update()
 {
     field.update();
     field.getVals(noiseVals);
+
+    while(receiver.hasWaitingMessages())
+    {
+        ofxOscMessage m;
+        receiver.getNextMessage(m);
+
+        if (m.getAddress() == "/noiseloop/xfader")
+        {
+            xf.set(m.getArgAsFloat(0));
+        }
+    }
 
     xf.update();
     mix.update();

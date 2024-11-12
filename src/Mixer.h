@@ -36,7 +36,7 @@ class Xfader
 public:
     Xfader();
     void setup(vector<float> &in);
-    void set(float &level);
+    void set(float level);
     void update();
     void enableCircular(bool cir);
     void faderChanged(float &fader);

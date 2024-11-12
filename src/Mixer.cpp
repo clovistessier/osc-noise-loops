@@ -105,7 +105,7 @@ void Xfader::setup(vector<float> &in)
     parameters.setName("crossfader");
     parameters.add(fader.set("fader", 0.0f, 0.0f, 1.0f));
     parameters.add(circular.set("circular", false));
-    parameters.add(smoothing.set("smoothing", 0.0f, 0.0f, 0.999f));
+    parameters.add(smoothing.set("smoothing", 0.9f, 0.0f, 0.999f));
 
     fader_follower = fader.get();
 
@@ -114,7 +114,7 @@ void Xfader::setup(vector<float> &in)
 }
 
 // level should be normalized to [0.0, 1.0]
-void Xfader::set(float &level)
+void Xfader::set(float level)
 {
     fader = level;
     // update will be called bc addListener
